@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="StopCovid.Views.Conseil" NavigationPage.HasNavigationBar="False">
+
+
+
+    <StackLayout BackgroundColor="Transparent">
+
+        <yummy:PancakeView  BackgroundColor="#0189F6" HeightRequest="150" CornerRadius="2,2,50,50">
+            <Label Text="Conseil" TextColor="White" FontSize="30" FontAttributes="Bold" FontFamily="Arial, Helvetica, sans-serif" Margin="40,50,10,10"/>
+        </yummy:PancakeView>
+        
+        <ScrollView>
+            <StackLayout Orientation="Vertical" HeightRequest="550" BackgroundColor="Transparent" Padding="5,0,5,0">
+                <StackLayout Orientation="Horizontal">
+                    <yummy:PancakeView HeightRequest="350" WidthRequest="80" CornerRadius="50,50,50,50" BackgroundColor="WhiteSmoke" TranslationX="10" TranslationY="10">
+                        <StackLayout Orientation="Vertical" TranslationY="40">
+                            <ImageButton Source="fruits" Aspect="AspectFit" HeightRequest="50" BackgroundColor="Transparent" x:Name="alimen"/>
+                            <ImageButton Source="healthy" Aspect="AspectFit" HeightRequest="50" BackgroundColor="Transparent" TranslationY="50" x:Name="manger"/>
+                            <ImageButton Source="watter" Aspect="AspectFit" HeightRequest="50" BackgroundColor="Transparent" TranslationY="100" x:Name="eau"/>
+                        </StackLayout>
+                    </yummy:PancakeView>
+                    <StackLayout>
+
+                        <Frame  BackgroundColor="LightGreen" BorderColor="#0189F6" TranslationX="30" TranslationY="30" HasShadow="False" CornerRadius="40" WidthRequest="200" HeightRequest="250">
+                            <StackLayout>
+                                <Image Source="healthy" BackgroundColor="Transparent" HeightRequest="150" TranslationY="10" TranslationX="35"/>
+                                <Label Text="Les rires éclatent mieux lorsque la nourriture est bonne" TextColor="White" FontSize="20" FontAttributes="Bold" FontFamily="Arial, Helvetica, sans-serif" Margin="10,10,10,10"/>
+                            </StackLayout>
+                        </Frame>
+                        
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout>
+                    <Label HorizontalOptions="CenterAndExpand" Text="Les Aliments" TextColor="Black" FontSize="25" FontAttributes="Bold" FontFamily="Arial, Helvetica, sans-serif" Margin="10,10,10,10"/>
+                    <Label  Text="Bien se nourrit protege la santé des maladies.suivez les conseils cela peut vous aidez à être toujour en bonne santé" TextColor="Black" FontSize="15" FontAttributes="Italic" Margin="10,10,10,10"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+       
+       
+
+
+
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid.Android\\StopCovid.Android.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid.Android\\StopCovid.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid.Android\\StopCovid.Android.csproj",
+        "projectName": "StopCovid.Android",
+        "projectPath": "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid.Android\\StopCovid.Android.csproj",
+        "packagesPath": "C:\\Users\\imac 22\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imac 22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid90"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid90": {
+            "projectReferences": {
+              "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid\\StopCovid.csproj": {
+                "projectPath": "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid\\StopCovid.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "dependencies": {
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.495, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid\\StopCovid.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid\\StopCovid.csproj",
+        "projectName": "StopCovid",
+        "projectPath": "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid\\StopCovid.csproj",
+        "packagesPath": "C:\\Users\\imac 22\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\imac 22\\source\\repos\\StopCovid\\StopCovid\\StopCovid\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imac 22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Com.Airbnb.Xamarin.Forms.Lottie": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "XLabs.Forms": {
+              "target": "Package",
+              "version": "[2.0.5782, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.495, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[1.4.2, )"
+            },
+            "sqlite-net": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

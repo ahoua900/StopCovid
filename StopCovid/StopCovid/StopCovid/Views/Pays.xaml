@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2C3E50"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="StopCovid.Views.Pays">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15" Padding="10">
+                <Label Text="Countries statistics"  FontSize="25" TextColor="White" FontAttributes="Bold" HorizontalOptions="Start"/>
+                <Frame BackgroundColor="#E1E1E1" CornerRadius="7" Padding="7" HorizontalOptions="Center" WidthRequest="230" HeightRequest="30">
+                    <SearchBar Placeholder="rechercher un pays ..." TextChanged="SearchBar_TextChanged" x:Name="recherche"/>
+                </Frame>
+                <yummy:PancakeView CornerRadius="20,20,0,0" BackgroundColor="White">
+                    <ListView x:Name="liste" BackgroundColor="#2C3E50" RowHeight="180">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <yummy:PancakeView CornerRadius="10" BackgroundColor="White" Margin="10,15">
+                                <StackLayout Padding="10" Spacing="6">
+                                            <StackLayout Orientation="Horizontal" Padding="10">
+                                                <Label Text="{Binding Country}" FontSize="18" TextColor="Black" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                            </StackLayout>
+                                            <Grid>
+                                                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                                    <Label Text="Confirmés" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" FontSize="17"/>
+                                                    <Button WidthRequest="50" Text="{Binding NewConfirmed}" TextColor="White" FontAttributes="Bold" BackgroundColor="#338E05" CornerRadius="12" HeightRequest="40"/>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                                                    <Label Text="Décès" HorizontalTextAlignment="Center"  TextColor="Black" FontAttributes="Bold" FontSize="17"/>
+                                                    <Button WidthRequest="50" Text="{Binding NewDeaths}" TextColor="White" FontAttributes="Bold" BackgroundColor="#FB3929" CornerRadius="12" HeightRequest="40"/>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="2">
+                                                    <Label Text="Guéris" HorizontalTextAlignment="Center"  TextColor="Black" FontAttributes="Bold" FontSize="17"/>
+                                                    <Button WidthRequest="50" Text="{Binding NewRecovered}" TextColor="White" FontAttributes="Bold" BackgroundColor="#0E8FF6" CornerRadius="12" HeightRequest="40"/>
+                                                </StackLayout>
+                                            </Grid>
+                                        </StackLayout>
+                            </yummy:PancakeView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </yummy:PancakeView>
+            
+        </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

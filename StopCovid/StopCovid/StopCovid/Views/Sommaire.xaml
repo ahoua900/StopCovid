@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             mc:Ignorable="d"
+             x:Class="StopCovid.Views.Sommaire">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10" Spacing="10">
+                <Frame x:Name="pasinternet" HorizontalOptions="Center" BackgroundColor="#2C3E50" CornerRadius="30" Padding="16" IsVisible="False">
+                    <Label Text="Vérifiez votre connexion internet"
+                           TextColor="White"                          
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                </Frame>
+                <StackLayout x:Name="mapage">
+                    <Image Source="virus"
+                       HeightRequest="50"
+                       WidthRequest="50"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Start"/>
+                    <Grid ColumnSpacing="30">
+                        <Label Text="TODAY"
+                           FontAttributes="Bold"
+                           Grid.Column="0"
+                           FontSize="23"
+                           TextColor="Black"
+                           Grid.Row="0"/>
+                        <Label x:Name="date"
+                           FontAttributes="Bold"
+                           Grid.Column="2"
+                           FontSize="16"
+                           TextColor="Black"
+                           Grid.Row="0"/>
+                    </Grid>
+                    <Grid ColumnSpacing="15">
+                        <Yummy:PancakeView  BackgroundColor="#338E05" CornerRadius="20" Grid.Row="0" Grid.Column="0">
+                            <StackLayout Spacing="10">
+                                <Yummy:PancakeView BackgroundColor="#5AC852" CornerRadius="0,0,50,0" Padding="15"
+                                   HorizontalOptions="EndAndExpand">
+                                    <Image Source="contamination"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   Aspect="AspectFit"/>
+                                </Yummy:PancakeView>
+                                <Label Text="Nouveaux Confirmés" 
+                                   FontAttributes="Bold"
+                                   FontSize="22"
+                                   Padding="10,15"
+                                   TextColor="White"
+                                   HorizontalOptions="StartAndExpand"/>
+                                <Yummy:PancakeView BackgroundColor="#5AC852" CornerRadius="20,20,0,0" Padding="10" VerticalOptions="EndAndExpand">
+                                    <Label x:Name="newconf" 
+                               FontAttributes="Bold"
+                               FontSize="25"
+                               TextColor="White"
+                               HorizontalOptions="StartAndExpand"/>
+                                </Yummy:PancakeView>
+                            </StackLayout>
+                        </Yummy:PancakeView>
+                        <Yummy:PancakeView  BackgroundColor="#D81302" CornerRadius="20" Grid.Row="0" Grid.Column="1">
+                            <StackLayout>
+                                <Yummy:PancakeView BackgroundColor="#FB3929"  CornerRadius="0,0,50,0" Padding="15"
+                                   HorizontalOptions="EndAndExpand">
+                                    <Image Source="mort"
+                                       HeightRequest="40"
+                                       WidthRequest="40"
+                                       Aspect="AspectFit"/>
+                                </Yummy:PancakeView>
+                                <Label Text="Nouveaux décès" 
+                                   FontAttributes="Bold"
+                                   FontSize="22"
+                               Padding="10"
+                                   TextColor="White"
+                                   HorizontalOptions="StartAndExpand"/>
+                                <Yummy:PancakeView BackgroundColor="#FB3929" CornerRadius="20,20,0,0" Padding="10" VerticalOptions="EndAndExpand">
+                                    <Label x:Name="newdeath" 
+                               FontAttributes="Bold"
+                               FontSize="25"
+                               TextColor="White"
+                               HorizontalOptions="StartAndExpand"/>
+                                </Yummy:PancakeView>
+                            </StackLayout>
+                        </Yummy:PancakeView>
+                        <Yummy:PancakeView  BackgroundColor="#193952" CornerRadius="20" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Nouveaux guéris" 
+                                           FontAttributes="Bold"
+                                           FontSize="22"
+                                           VerticalTextAlignment="Center"
+                                           Padding="10"
+                                           TextColor="White"
+                                           HorizontalOptions="StartAndExpand"/>
+                                    <Yummy:PancakeView BackgroundColor="White"  CornerRadius="0,0,50,0" Padding="15"
+                                   HorizontalOptions="EndAndExpand">
+                                        <Image Source="heartPage"
+                                       HeightRequest="40"
+                                       WidthRequest="40"
+                                       Aspect="AspectFit"/>
+                                    </Yummy:PancakeView>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                                    <Image Source="recovered"
+                                           Aspect="AspectFit"
+                                           HeightRequest="70"
+                                           WidthRequest="80"
+                                           HorizontalOptions="StartAndExpand"/>
+                                    <Button x:Name="newrecor" 
+                                           FontAttributes="Bold"
+                                           FontSize="25"
+                                            WidthRequest="190"
+                                            HeightRequest="40"
+                                           TextColor="Black"
+                                           HorizontalOptions="StartAndExpand"
+                                            BackgroundColor="White" CornerRadius="10"/>
+                                </StackLayout>
+
+                                <Yummy:PancakeView  Padding="10" VerticalOptions="EndAndExpand">
+                                    
+                                </Yummy:PancakeView>
+                            </StackLayout>
+                        </Yummy:PancakeView>
+                    </Grid>
+                    <Grid ColumnSpacing="30">
+                        <Label Text="TOTAL"
+                           FontAttributes="Bold"
+                           Grid.Column="0"
+                           FontSize="23"
+                           TextColor="Black"
+                           Grid.Row="0"/>
+                    </Grid>
+                    <Grid ColumnSpacing="15">
+                        <Yummy:PancakeView  BackgroundColor="#338E05" CornerRadius="20" Grid.Row="0" Grid.Column="0">
+                            <StackLayout Spacing="10">
+                                <Yummy:PancakeView BackgroundColor="#5AC852" CornerRadius="0,0,50,0" Padding="15"
+                                   HorizontalOptions="EndAndExpand">
+                                    <Image Source="contamination"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   Aspect="AspectFit"/>
+                                </Yummy:PancakeView>
+                                <Label Text="Total Confirmed" 
+                                   FontAttributes="Bold"
+                                   FontSize="22"
+                                   Padding="10,15"
+                                   TextColor="White"
+                                   HorizontalOptions="StartAndExpand"/>
+                                <Yummy:PancakeView BackgroundColor="#5AC852" CornerRadius="10,10,0,0" Padding="10" VerticalOptions="EndAndExpand">
+                                    <Label x:Name="totalconf" 
+                               FontAttributes="Bold"
+                               FontSize="25"
+                               TextColor="White"
+                               HorizontalOptions="StartAndExpand"/>
+                                </Yummy:PancakeView>
+                            </StackLayout>
+                        </Yummy:PancakeView>
+                        <Yummy:PancakeView  BackgroundColor="#D81302" CornerRadius="20" Grid.Row="0" Grid.Column="1">
+                            <StackLayout Spacing="10">
+                                <Yummy:PancakeView BackgroundColor="#FB3929" CornerRadius="0,0,50,0" Padding="15"
+                                   HorizontalOptions="EndAndExpand">
+                                    <Image Source="mort"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   Aspect="AspectFit"/>
+                                </Yummy:PancakeView>
+                                <Label Text="Total Deaths" 
+                                   Padding="10,15"
+                                   FontAttributes="Bold"
+                                   FontSize="22"
+                                   TextColor="White"
+                                   HorizontalOptions="StartAndExpand"/>
+                                <Yummy:PancakeView BackgroundColor="#FB3929" CornerRadius="20,20,0,0" Padding="10" VerticalOptions="EndAndExpand">
+                                    <Label x:Name="totaldeath"
+                               FontAttributes="Bold"
+                               FontSize="25"
+                               TextColor="White"
+                               HorizontalOptions="StartAndExpand"/>
+                                </Yummy:PancakeView>
+
+                            </StackLayout>
+                        </Yummy:PancakeView>
+                        <Yummy:PancakeView  BackgroundColor="#193952" CornerRadius="20" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Total guéris" 
+                                           FontAttributes="Bold"
+                                           FontSize="22"
+                                           VerticalTextAlignment="Center"
+                                           Padding="10"
+                                           TextColor="White"
+                                           HorizontalOptions="StartAndExpand"/>
+                                    <Yummy:PancakeView BackgroundColor="White"  CornerRadius="0,0,50,0" Padding="15"
+                                   HorizontalOptions="EndAndExpand">
+                                        <Image Source="heartPage"
+                                       HeightRequest="40"
+                                       WidthRequest="40"
+                                       Aspect="AspectFit"/>
+                                    </Yummy:PancakeView>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                                    <Image Source="recovered"
+                                           Aspect="AspectFit"
+                                           HeightRequest="70"
+                                           WidthRequest="80"
+                                           HorizontalOptions="StartAndExpand"/>
+                                    <Button x:Name="totalrecor" 
+                                           FontAttributes="Bold"
+                                           FontSize="25"
+                                            WidthRequest="190"
+                                            HeightRequest="40"
+                                           TextColor="Black"
+                                           HorizontalOptions="StartAndExpand"
+                                            BackgroundColor="White" CornerRadius="10"/>
+                                </StackLayout>
+
+                                <Yummy:PancakeView  Padding="10" VerticalOptions="EndAndExpand">
+
+                                </Yummy:PancakeView>
+                            </StackLayout>
+                        </Yummy:PancakeView>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

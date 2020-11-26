@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="StopCovid.Views.Health" NavigationPage.HasNavigationBar="False">
+
+
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu_sante">
+            <ContentPage.Content>
+                <StackLayout>
+                    <yummy:PancakeView  BackgroundColor="#0189F6" HeightRequest="150" CornerRadius="70,0,15,90">
+                        <Label Text="Ma Santé" TextColor="White" FontSize="30" FontAttributes="Bold" FontFamily="Arial, Helvetica, sans-serif" Margin="70,50,10,10"/>
+                    </yummy:PancakeView>
+
+
+                    <StackLayout TranslationY="30" TranslationX="20">
+
+                        <StackLayout Orientation="Horizontal">
+                            <ImageButton Source="hot" BackgroundColor="Transparent" Aspect="AspectFit" HeightRequest="50" Margin="5,5,5,20"/>
+                            <Button Text="Ma Temperature" TextColor="Black" FontSize="13" FontAttributes="Bold" BackgroundColor="Transparent" x:Name="temp"/>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="LightGray"/>
+
+                        <StackLayout Orientation="Horizontal">
+                            <ImageButton Source="notes" BackgroundColor="Transparent" Aspect="AspectFit" HeightRequest="50" Margin="5,5,5,20"/>
+                            <Button Text="Mon Bilan" TextColor="Black" FontSize="13" FontAttributes="Bold" BackgroundColor="Transparent" x:Name="bilan"/>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="LightGray"/>
+
+                        <StackLayout Orientation="Horizontal">
+                            <ImageButton Source="lightbulb" BackgroundColor="Transparent" Aspect="AspectFit" HeightRequest="50" Margin="5,5,5,20"/>
+                            <Button Text="Conseille" FontSize="13" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" x:Name="conseil"/>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="LightGray"/>
+
+
+                    </StackLayout>
+
+                    <StackLayout TranslationY="100" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Contactez un medecin plus proche" TextColor="Gray" FontAttributes="Bold" FontSize="17"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" TranslationY="20">
+                            <ImageButton Source="advice" Aspect="AspectFit" HeightRequest="50" TranslationX="-10" BackgroundColor="Transparent" x:Name="medecin"/>
+                            <ImageButton Source="home" Aspect="AspectFit" HeightRequest="50" TranslationX="10" BackgroundColor="Transparent" x:Name="hopital"/>
+                        </StackLayout>
+
+                    </StackLayout>
+                    
+                    
+                    
+                </StackLayout>
+              
+            </ContentPage.Content>
+        
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    
+    <MasterDetailPage.Detail>
+        <ContentPage>
+
+            <StackLayout HorizontalOptions="CenterAndExpand">
+               
+                
+
+                <StackLayout Margin="10,130,20,0">
+                    <Image Source="doctor" Aspect="AspectFit" HeightRequest="180" Margin="5,10,5,20"/>
+                    <StackLayout>
+                        <Label Text="Se Contrôller tout les jours " TextColor="Black" FontSize="25" TranslationX="10"  FontAttributes="Italic"/>
+                        <Label Text=" redonne de la couleur" TextColor="Black" FontSize="25" TranslationX="30" FontAttributes="Italic"/>
+                        <Label Text="à nos vies" TextColor="Black" FontSize="25" TranslationX="90" FontAttributes="Italic"/>
+                    
+                       
+                    </StackLayout>
+
+                </StackLayout>
+
+            </StackLayout>
+            
+           
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+
+
+</MasterDetailPage>

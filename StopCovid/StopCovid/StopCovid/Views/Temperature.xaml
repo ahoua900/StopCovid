@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:renders="clr-namespace:StopCovid.Renders" xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             mc:Ignorable="d"
+             x:Class="StopCovid.Views.Temperature" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <yummy:PancakeView  BackgroundColor="#0189F6" HeightRequest="150" CornerRadius="0,0,0,190">
+                <Label Text="Ma Temperature" TextColor="White" FontSize="27" FontAttributes="Bold" FontFamily="Arial, Helvetica, sans-serif" Margin="40,50,10,10"/>
+            </yummy:PancakeView>
+
+            
+                    <ScrollView Orientation="Vertical">
+                <yummy:PancakeView  BackgroundColor="Transparent" TranslationY="-50" CornerRadius="50,50,40,40" Margin="10,10,10,10" HeightRequest="550" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Vertical" Margin="20,20,20,10">
+
+                        <StackLayout>
+                            <Frame Padding="10,0,0,0" TranslationY="30"  BackgroundColor="Transparent" BorderColor="LightGray" HasShadow="False" CornerRadius="40" WidthRequest="10" HeightRequest="50">
+                                <renders:BorderlessEntry x:Name="nom" Placeholder="Nom" PlaceholderColor="Black" FontSize="15" ClearButtonVisibility="WhileEditing"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Frame Padding="10,0,0,0" TranslationY="40"  BackgroundColor="Transparent" BorderColor="LightGray" HasShadow="False" CornerRadius="40" WidthRequest="10" HeightRequest="50">
+                                <renders:BorderlessEntry x:Name="termo" Placeholder="Prise de temperature" PlaceholderColor="Black" FontSize="15" ClearButtonVisibility="WhileEditing"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout TranslationY="50" TranslationX="20">
+                            <Label Text="Avez Vous la toux?" FontSize="20"  TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout TranslationY="50" Padding="50,-50,0,10">
+                            <Grid>
+                                <controls:BindableRadioGroup x:Name="ansPicker"
+                                             Grid.Row="1"
+                                             FontName="AmericanTypewriter"
+                                             SelectedIndex="{Binding ItemSelected}"
+                                             VerticalOptions="Start" />
+                            </Grid>
+                        </StackLayout>
+
+
+                        <StackLayout>
+                            <Frame Padding="20,10,20,0" TranslationY="40"  BackgroundColor="Transparent" BorderColor="LightGray" HasShadow="False" CornerRadius="30"  >
+                                <renders:BorderlessEntry x:Name="message" TranslationY="-60" Placeholder="Décrivez nous votre toux" PlaceholderColor="LightGray" FontSize="15"  WidthRequest="20" HeightRequest="170" ClearButtonVisibility="WhileEditing"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <Button TranslationY="40" Text="Enregistrer" BackgroundColor="#71BFFd" TextColor="White" CornerRadius="20" WidthRequest="50" x:Name="enregist"/>
+                       
+                    </StackLayout>
+
+
+                   
+
+                </yummy:PancakeView>
+            </ScrollView>
+          
+        
+           
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

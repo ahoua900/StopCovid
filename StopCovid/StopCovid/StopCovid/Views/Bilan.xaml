@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:renders="clr-namespace:StopCovid.Renders"
+             mc:Ignorable="d"
+             x:Class="StopCovid.Views.Bilan" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+      
+            <StackLayout>
+
+                <yummy:PancakeView  BackgroundColor="#0189F6" HeightRequest="150" CornerRadius="0,0,0,290">
+                    <Label Text="Mon Bilan" TextColor="White" FontSize="27" FontAttributes="Bold" FontFamily="Arial, Helvetica, sans-serif" Margin="40,50,10,10"/>
+                </yummy:PancakeView>
+            <ScrollView>
+
+                <StackLayout HeightRequest="500" Margin="20,50,20,50">
+
+                    <Label Text="Quelle est votre santé actuelle?" TextColor="Black" FontSize="27" FontAttributes="Bold" FontFamily="Arial, Helvetica, sans-serif" Margin="40,50,10,10"/>
+                    <Frame Padding="20,0,20,0" TranslationY="40"  BackgroundColor="Transparent" BorderColor="LightGray" HasShadow="False" CornerRadius="30"  >
+                        <renders:BorderlessEntry x:Name="message" TranslationY="-60" Placeholder="Expliquez nous en quelque ligne votre santé..." PlaceholderColor="LightGray" FontSize="14"  WidthRequest="10" HeightRequest="170" ClearButtonVisibility="WhileEditing"/>
+                    </Frame>
+
+                    <Button TranslationY="50" Text="Enregistrer" BackgroundColor="#71BFFd" TextColor="White" CornerRadius="20" WidthRequest="50" x:Name="enregist"/>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+     
+       
+    </ContentPage.Content>
+</ContentPage>

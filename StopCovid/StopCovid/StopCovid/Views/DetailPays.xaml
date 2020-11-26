@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="fonds"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="StopCovid.Views.DetailPays">
+    <ContentPage.Content>
+        <StackLayout Padding="12" Spacing="30">
+            <StackLayout Orientation="Horizontal">
+                <Label  x:Name="nompays" TextColor="Black" FontSize="32" HorizontalTextAlignment="Start"
+                   HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                <Label x:Name="nomslug" TextColor="Black" FontSize="22" HorizontalTextAlignment="End"
+                   HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" BackgroundColor="#193952" Spacing="20">
+                <yummy:PancakeView  Margin="10">
+                    <StackLayout Padding="15" Spacing="20">
+                        <Label Text="Données du jour" FontSize="25" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                        <Grid>
+                            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                <Label Text="Confirmés" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                                <Button WidthRequest="50" x:Name="newconfi" TextColor="White" FontAttributes="Bold" BackgroundColor="#338E05" CornerRadius="12" HeightRequest="40"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                                <Label Text="Décès" HorizontalTextAlignment="Center"  TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                                <Button WidthRequest="50" x:Name="newdeaths" TextColor="White" FontAttributes="Bold" BackgroundColor="#FB3929" CornerRadius="12" HeightRequest="40"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="2">
+                                <Label Text="Guéris" HorizontalTextAlignment="Center"  TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                                <Button WidthRequest="50" x:Name="newrecore" TextColor="White" FontAttributes="Bold" BackgroundColor="#0E8FF6" CornerRadius="12" HeightRequest="40"/>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </yummy:PancakeView>
+                <yummy:PancakeView  Margin="10">
+                    <StackLayout Padding="15">
+                        <Label Text="Données générales" FontSize="25" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                        <Grid>
+                            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                <Label Text="Confirmés" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                                <Button WidthRequest="50" x:Name="totalconfi" TextColor="White" FontAttributes="Bold" BackgroundColor="#338E05" CornerRadius="12" HeightRequest="40"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                                <Label Text="Décès" HorizontalTextAlignment="Center"  TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                                <Button WidthRequest="50" x:Name="totaldeaths" TextColor="White" FontAttributes="Bold" BackgroundColor="#FB3929" CornerRadius="12" HeightRequest="40"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="2">
+                                <Label Text="Guéris" HorizontalTextAlignment="Center"  TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                                <Button WidthRequest="50" x:Name="totalrecord" TextColor="White" FontAttributes="Bold" BackgroundColor="#0E8FF6" CornerRadius="12" HeightRequest="40"/>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </yummy:PancakeView>
+            </StackLayout>
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

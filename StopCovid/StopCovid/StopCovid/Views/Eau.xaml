@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StopCovid.Views.Eau" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout TranslationY="20" TranslationX="20">
+            <ImageButton Source="retour" Aspect="AspectFit" HeightRequest="30" HorizontalOptions="StartAndExpand" x:Name="black" BackgroundColor="Transparent"/>
+            <StackLayout TranslationY="50">
+                <Image Source="watter" Aspect="AspectFit" HeightRequest="290" TranslationX="-10" BackgroundColor="Transparent"/>
+                <StackLayout TranslationY="50">
+                    <Label HorizontalOptions="StartAndExpand" Text="Les Aliments" TextColor="Black" FontSize="25" FontAttributes="Bold" FontFamily="Arial, Helvetica, sans-serif" Margin="10,10,10,10"/>
+                    <Label  Text="Bien se nourrit protege la santé des maladies.suivez les conseils cela peut vous aidez à être toujour en bonne santé" TextColor="Black" FontSize="15" FontAttributes="Italic" Margin="10,10,20,10"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
